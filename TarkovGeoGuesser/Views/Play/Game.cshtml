@@ -1,0 +1,15 @@
+﻿@page
+@model TarkovGeoGuesser.Pages.Play.Game
+
+@{
+    string url = @ViewBag.GameImage;
+}
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12">
+            <img src="@(url)" alt="A random image within tarkov.">
+        </div>
+    </div>
+</div>
+

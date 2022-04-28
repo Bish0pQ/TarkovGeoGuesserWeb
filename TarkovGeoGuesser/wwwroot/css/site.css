@@ -1,0 +1,158 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+  background-color: #000000;
+}
+
+
+/* CSS */
+.default-button {
+  align-items: center;
+  background-image: linear-gradient(144deg, #9a8866, #ba9d66 50%, #9a8866);
+  border: 0;
+  border-radius: 8px;
+  box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  display: flex;
+  font-family: Phantomsans, sans-serif;
+  font-size: 20px;
+  justify-content: center;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 140px;
+  padding: 3px;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  cursor: pointer;
+}
+
+.default-button .small-button {
+  font-size: 10px;
+  line-height: 1em;
+  max-width: 100%;
+  min-width: 60px;
+}
+
+.default-button:active,
+.default-button:hover {
+  outline: 0;
+}
+
+.default-button span {
+  background-color: rgb(5, 6, 45);
+  padding: 16px 24px;
+  border-radius: 6px;
+  width: 100%;
+  height: 100%;
+  transition: 300ms;
+}
+
+.default-button:hover span {
+  background: none;
+}
+
+@media (min-width: 768px) {
+  .default-button {
+    font-size: 24px;
+    min-width: 196px;
+  }
+}
+
+.center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.thumbnail {
+  max-width: 350px;
+  min-width: 50px;
+  cursor: pointer;
+}
+
+.thumbnail-big {
+  max-width: 500px;
+  min-width: 200px;
+  cursor: default;
+}
+
+.thumbnail-text {
+  color: #9a8866;
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.center-screen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+.center-horizontal {
+  width: 50%;
+  margin: 0 auto;
+}
+
+span, p, label {
+  color: #9a8866 !important;
+}
+
+.nav-link {
+  color: black !important;
+  background-color: #9a8866 !important;
+  margin-right:1px;
+  font-size:1.2em;
+}
+
+.navbar {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+}
+
+#selectedMapContainer {
+  border: 3px solid #bda371;
+  border-radius: 5px;
+}
+
+.btn-primary {
+  background-color: #9a8866 !important;
+  border: none !important;
+  color: black !important;
+}
+
+.btn-primary :hover {
+  background-color: #bda371 !important;
+}
+
+.diff {
+  min-width: 20% !important;
+  max-width: 30% !important;
+  margin-top: 1em;
+}

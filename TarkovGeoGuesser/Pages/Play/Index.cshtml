@@ -1,0 +1,77 @@
+﻿@page
+
+<div class="container-fluid">
+    <button class="default-button small-button center" role="button" id="startGame">
+        <span class="text">Play game</span>
+    </button>
+</div>
+
+<!-- Select map to play -->
+<div class="container-fluid hidden" id="map-select">
+    <div class="row" style="text-align: center;margin-top: 2em;">
+        <div class="col-4">
+            <img src="~/img/thumbs/thumb_factory.png" alt="Factory Image" class="thumbnail" data-map="Factory">
+            <br/>
+            <span class="thumbnail-text">Factory</span>
+        </div>
+        <div class="col-4">
+            <img src="~/img/thumbs/thumb_woods.jpg" alt="Woods image" class="thumbnail" data-map="Woods">
+            <br/>
+            <span class="thumbnail-text">Woods</span>
+        </div>
+        <div class="col-4">
+            <img src="~/img/thumbs/thumb_shoreline.jpg" alt="Shoreline image" class="thumbnail" data-map="Shoreline">
+            <br/>
+            <span class="thumbnail-text">Shoreline</span>
+        </div>
+    </div>
+</div>
+
+<!-- Select the difficulty -->
+<div class="container-fluid hidden" id="selectedMapContainer" style="margin-top:2em;max-width:60%;">
+    <div class="row" style="text-align: center;">
+        <div class="col-12" style="margin-bottom: 1em;">
+            <span style="font-weight: bold;margin-top: .5em;">Your selected map:</span>
+        </div>
+        <div class="col-12" style="text-align: center;">
+            <img src="~/img/thumbs/thumb_factory.png" alt="Placeholder image" id="selectedMap" class="thumbnail-big"/>
+        </div>
+        <div class="col-12">
+            <span id="selectedMapName" style="font-weight: bold;"></span>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid hidden" id="difficulty-select" style="min-height: 40vh; text-align: center;">
+    <div class="col-12" style="margin-top:2em;">
+        <span style="font-weight: bold;">Select your difficulty:</span>
+    </div>
+    @using (Html.BeginForm("NewGame", "Play", FormMethod.Post))
+    {
+        <div class="col-12">
+            <button class="btn btn-primary diff" role="button" id="selectEasy" name="diff_easy">
+                Easy
+            </button>
+        </div>
+        <div class="col-12">
+            <button class="btn btn-primary diff" role="button" id="selectMedium" name="diff_medium">
+                Medium
+            </button>
+        </div>
+
+        <div class="col-12">
+            <button class="btn btn-primary diff" role="button" id="selectHard" name="diff_hard">
+                Hard
+            </button>
+        </div>
+
+        <div class="col-12">
+            <button class="btn btn-primary diff" role="button" id="selectTarkov" name="diff_tarkovd">
+                Tarkov'd
+            </button>
+        </div>
+        
+        <input type="hidden" id="selectedMapInput" name="selectedMap" value="" />
+    }
+    
+</div>

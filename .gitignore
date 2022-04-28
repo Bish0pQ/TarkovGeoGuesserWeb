@@ -1,0 +1,9 @@
+# IDE ignores
+/.vs
+/.idea
+/TarkovGeoGuesser/bin
+/TarkovGeoGuesser/obj
+/TarkovGeoGuesser.Logic/obj
+/TarkovGeoGuesser.Logic/bin
+/TarkovGeoGuesser.Models/obj
+/TarkovGeoGuesser.Models/bin
