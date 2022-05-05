@@ -1,15 +1,40 @@
 ﻿@page
-@model TarkovGeoGuesser.Pages.Play.Game
+@model TarkovGeoGuesser.Views.Play.Game
 
 @{
     string url = @ViewBag.GameImage;
+    string mapImage = @ViewBag.MapImage;
+    Layout = "_Layout";
 }
 
 <div class="container-fluid">
-    <div class="row">
+    <div class="row" id="openMapContainer">
         <div class="col-12">
-            <img src="@(url)" alt="A random image within tarkov.">
+            <button class="default-button small-button center-horizontal" role="button" id="openMap" style="max-width: 75%;">
+                <span class="text">Open map</span>
+            </button>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 1em;" id="imageToGuessContainer">
+        <div class="col-12" style="text-align: center;">
+            <img src="@(url)" alt="A random image within tarkov." class="fullscreen-image" id="imageToGuess">
+        </div>
+    </div>
+    <div class="row" style="margin-top: 1em;display: none;" id="mapDisplay">
+        <!-- Generate grid -->
+        @for (var x = 1; x <= 20; x++)
+        {
+            var pos = "left: " +  (x * 5) + "%" ;
+            <span class="grid-line" style="@(pos)"></span>
+        }
+        @for (var y = 1; y <= 20; y++)
+        {
+            var pos = "top: " +  (y * 5) + "%" ;
+            <span class="grid-line-horizontal" style="@(pos)"></span>
+        }
+        
+        <div class="col-12" style="text-align: center;">
+            <img src="@(mapImage)" alt="Tarkov map that is selected" class="map" id="map">
         </div>
     </div>
 </div>
-

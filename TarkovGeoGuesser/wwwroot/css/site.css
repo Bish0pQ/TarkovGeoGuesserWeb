@@ -163,6 +163,8 @@ span, p, label {
   margin-top: 1em;
 }
 
+
+/**** Maps and grids ****/
 .fullscreen-image {
   max-height: 80vh;
 }
@@ -170,3 +172,38 @@ span, p, label {
 .map {
   max-height: 90vh;
 }
+
+.grid {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.grid {
+  background-image:
+          repeating-linear-gradient(#ccc 0 1px, transparent 1px 100%),
+          repeating-linear-gradient(90deg, #ccc 0 1px, transparent 1px 100%);
+  background-size: 71px 71px;
+}
+
+.grid-line {
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 1px;
+  background: red;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+.grid-line-horizontal {
+  position: absolute;
+  display: block;
+  height: 2px;
+  width: 100% !important;
+  background: red;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+
