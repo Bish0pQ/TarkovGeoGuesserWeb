@@ -4,7 +4,11 @@ using TarkovGeoGuesser.Logic.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
-builder.Services.AddRazorPages();
+//builder.Services.AddControllersWithViews();
+builder.Services.AddRazorPages(options =>
+{
+    options.Conventions.AddPageRoute("/Home/Index", "");
+}).AddRazorRuntimeCompilation();
 
 // Add custom services
 builder.Services

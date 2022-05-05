@@ -103,6 +103,12 @@ body {
   font-size: 1.5em;
 }
 
+.text-big {
+  color: #9a8866;
+  font-weight: bold;
+  font-size: 2em;
+}
+
 .hidden {
   display: none !important;
 }
@@ -155,4 +161,12 @@ span, p, label {
   min-width: 20% !important;
   max-width: 30% !important;
   margin-top: 1em;
+}
+
+.fullscreen-image {
+  max-height: 80vh;
+}
+
+.map {
+  max-height: 90vh;
 }

@@ -43,6 +43,7 @@ public class PlayController : Controller
         // Process the logic
         var imageResult = _gameService.CreateNew(gameRequest.Map.ToLower(), _environment.WebRootPath);
         ViewBag.GameImage = imageResult.Replace(_environment.WebRootPath, "");
+        ViewBag.MapImage = $"/img/maps/map_{gameRequest.Map.ToLower()}.jpg";
         return View("Game");
     }
 }

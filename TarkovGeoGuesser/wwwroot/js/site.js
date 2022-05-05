@@ -26,3 +26,15 @@ $('.thumbnail').on('click', ev => {
     $('#difficulty-select').removeClass('hidden');
     $('#selectedMapContainer').removeClass('hidden');
 })
+
+$('#openMap').on('click', _ => {
+    // Reset image container and hide it
+    document.getElementById('imageToGuessContainer').style.display = 'none';
+    let imageElement = document.getElementById('imageToGuess');
+    imageElement.setAttribute('url', '');
+    imageElement.setAttribute('alt', '');
+    
+    // Display map
+    document.getElementById('openMapContainer').style.display = 'none';
+    document.getElementById('mapDisplay').style.display = 'flex';
+})
