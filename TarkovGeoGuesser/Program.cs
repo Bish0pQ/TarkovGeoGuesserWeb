@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 //builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages(options =>
 {
-    options.Conventions.AddPageRoute("/Home/Index", "");
+    options.Conventions.AddPageRoute("/Play/Index", "");
 }).AddRazorRuntimeCompilation();
 
 // Add custom services
